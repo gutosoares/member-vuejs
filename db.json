@@ -1,5 +1,5 @@
 {
-  "customers": [
+  "members": [
     {
       "name": "John Doe",
       "email": "john@gmail.com",
@@ -35,6 +35,18 @@
       "email": "smith@gmail.com",
       "office": "Design",
       "id": 6
+    },
+    {
+      "name": "Tolkien",
+      "email": "tolkien@hobbit.com",
+      "office": "Hobbit Author",
+      "id": 7
+    },
+    {
+      "name": "Carlos",
+      "email": "carlos@bol.com",
+      "office": "Analista de Sistemas",
+      "id": 8
     }
   ]
 }
