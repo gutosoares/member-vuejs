@@ -1,94 +1,40 @@
 {
   "customers": [
     {
-      "first_name": "John",
-      "last_name": "Smith",
-      "phone": "219-839-2819",
+      "name": "John Doe",
       "email": "john@gmail.com",
-      "address": "Dom Joaquim Silverio",
-      "city": "Lavras",
-      "state": "MG",
+      "office": "Back-End Developer",
       "id": 1
     },
     {
       "id": 2,
-      "first_name": "Augusto",
-      "last_name": "Soares",
-      "phone": "219-839-2819",
-      "email": "john@gmail.com",
-      "address": "teste",
-      "city": "Lavras",
-      "state": "MG"
+      "name": "Augusto Soares",
+      "email": "gutosoares@outlook.com",
+      "office": "Front-End Developer"
     },
     {
-      "first_name": "Evan",
-      "last_name": "You",
-      "phone": "219-839-2819",
+      "name": "Evan You",
       "email": "evanyou@vue.com",
-      "address": "California",
-      "city": "Lavras",
-      "state": "MG",
+      "office": "Creator of Vuejs",
       "id": 3
     },
     {
       "id": 4,
-      "first_name": "Bilbo",
-      "last_name": "Bolseiro",
-      "phone": "219-839-2819",
+      "name": "Bilbo Bolseiro",
       "email": "bilbo@gmail.com",
-      "address": "teste",
-      "city": "Lavras",
-      "state": "MG"
+      "office": "Aventureiro"
     },
     {
-      "first_name": "Samy",
-      "last_name": "Purewal",
-      "phone": "(35)991797875",
+      "name": "Samy Purewal",
       "email": "samy@gmail.com",
-      "address": "Rua Safira",
-      "city": "Lavras",
-      "state": "mg",
+      "office": "Back-End Developer",
       "id": 5
     },
     {
-      "first_name": "Samy",
-      "last_name": "Purewal",
-      "phone": "(35)991797875",
-      "email": "samy@gmail.com",
-      "address": "Rua Safira",
-      "city": "Lavras",
-      "state": "mg",
+      "name": "Michael Smith",
+      "email": "smith@gmail.com",
+      "office": "Design",
       "id": 6
-    },
-    {
-      "first_name": "Samy",
-      "last_name": "Purewal",
-      "phone": "(35)991797875",
-      "email": "samy@gmail.com",
-      "address": "Rua Safira",
-      "city": "Lavras",
-      "state": "mg",
-      "id": 7
-    },
-    {
-      "first_name": "John",
-      "last_name": "Doe",
-      "phone": "9999921",
-      "email": "john@gmail.com",
-      "address": "Lavras",
-      "city": "Lvras",
-      "state": "mg",
-      "id": 8
-    },
-    {
-      "first_name": "sa",
-      "last_name": "sa",
-      "phone": "sa",
-      "email": "sa@gmail.com",
-      "address": "21",
-      "city": "sa",
-      "state": "sa",
-      "id": 9
     }
   ]
 }
