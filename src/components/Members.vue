@@ -8,6 +8,7 @@
                     <th>Name</th>
                     <th>Email</th>
                     <th>Office</th>
+                    <th>Ações</th>
                 </tr>
             </thead>
             <tbody>
@@ -15,6 +16,7 @@
                     <td>{{ member.name }}</td>
                     <td>{{ member.email }}</td>
                     <td>{{ member.office }}</td>
+                    <td><button>Detalhes</button></td>
                 </tr>
             </tbody>
         </table>
@@ -35,7 +37,7 @@ export default {
     methods: {
         fetchMembers() {
             var self = this
-            self.$http.get('http://localhost:3000/customers').then(response => {
+            self.$http.get('http://localhost:3000/members').then(response => {
                 self.members = response.data
             })
         },
