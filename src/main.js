@@ -26,17 +26,6 @@ const router = new VueRouter({
 
 new Vue({
 	router,
-	template: `
-		<div id="app">
-			<nav>
-				<ul>
-					<router-link to="/"><button>Members</button></router-link>
-					<router-link to="/add"><button>Add Member</button></router-link>
-				</ul>
-			</nav>
-			<main>
-				<router-view></router-view>
-			</main>	
-		</div>
-	`
+	template: '<App/>',
+	components: {App}
 }).$mount('#app')
