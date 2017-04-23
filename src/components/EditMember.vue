@@ -1,5 +1,5 @@
 <template>
-    <id id="edit-member">
+    <div id="edit-member">
         <h1>Edit Member</h1>
         <form v-on:submit.prevent="updateMember">
             <label for="name">Name</label>
@@ -11,9 +11,9 @@
             <label for="office">Office</label>
             <input type="text" id="office" placeholder="Ex: The Hobbit Author" v-model="member.office">
 
-            <button type="submit">Add Member</button>
+            <button type="submit">Save</button>
         </form>
-    </id>
+    </div>
 </template>
 
 <script>
@@ -29,8 +29,33 @@ export default {
     methods: {
         fetchEditMember(id) {
             var self = this
-            self.$http.ge('http://localhost:3000/members/' + id)
+            self.$http.get('http://localhost:3000/members/' + id).then(response => {
+                self.member = response.data
+                console.log(self.member)
+            })
+        },
+
+        updateMember() {
+            if(!this.member.name || !this.member.email || !this.member.office) {
+                console.log("lease fill in all required fields")
+            } else {
+                let updateMember = {
+                    name: this.member.name,
+                    email: this.member.email,
+                    office: this.member.office
+                }
+
+                var self = this
+                self.$http.put('http://localhost:3000/members/' + self.$route.params.id, updateMember).then(response => {
+                    console.log("Edit Member with success")
+                    self.$router.push({path: '/'})
+                })
+            }
         }
+    },
+
+    mounted() {
+        this.fetchEditMember(this.$route.params.id)
     }
 }
 </script>

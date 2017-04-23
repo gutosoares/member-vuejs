@@ -16,7 +16,9 @@
                     <td>{{ member.name }}</td>
                     <td>{{ member.email }}</td>
                     <td>{{ member.office }}</td>
-                    <td><button>Detalhes</button></td>
+                    <td>
+                        <router-link v-bind:to="'/edit/' + member.id"><button>Edit</button></router-link>
+                    </td>
                 </tr>
             </tbody>
         </table>

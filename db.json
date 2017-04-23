@@ -1,8 +1,8 @@
 {
   "members": [
     {
-      "name": "John Doe",
-      "email": "john@gmail.com",
+      "name": "Doe John",
+      "email": "johndoe@gmail.com",
       "office": "Back-End Developer",
       "id": 1
     },
