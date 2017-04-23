@@ -29,7 +29,8 @@ export default {
     methods: {
         addMember() {
             if(!this.member.name || !this.member.email || !this.member.office) {
-                console.log("Please fill in all required fields")
+                toastr.options.positionClass = "toast-bottom-right"
+                toastr["warning"]("Please fill in all required fields")
             } else {
                 let newMember = {
                     name: this.member.name,
@@ -38,7 +39,8 @@ export default {
                 }
 
                 this.$http.post('http://localhost:3000/members', newMember).then(response => {
-                    console.log("Add new beautiful member")
+                    toastr.options.positionClass = "toast-bottom-right"
+                    toastr["success"]("Add new beautiful member")
                     this.$router.push({path: '/'})
                 })
             }

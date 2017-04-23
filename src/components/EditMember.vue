@@ -31,7 +31,6 @@ export default {
             var self = this
             self.$http.get('http://localhost:3000/members/' + id).then(response => {
                 self.member = response.data
-                console.log(self.member)
             })
         },
 
@@ -47,7 +46,8 @@ export default {
 
                 var self = this
                 self.$http.put('http://localhost:3000/members/' + self.$route.params.id, updateMember).then(response => {
-                    console.log("Edit Member with success")
+                    toastr.options.positionClass = "toast-bottom-right"
+                    toastr["success"]("Edit Member with success")
                     self.$router.push({path: '/'})
                 })
             }

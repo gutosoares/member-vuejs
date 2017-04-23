@@ -1,7 +1,7 @@
 {
   "members": [
     {
-      "name": "Doe John",
+      "name": "John Doe",
       "email": "johndoe@gmail.com",
       "office": "Back-End Developer",
       "id": 1
@@ -41,12 +41,6 @@
       "email": "tolkien@hobbit.com",
       "office": "Hobbit Author",
       "id": 7
-    },
-    {
-      "name": "Carlos",
-      "email": "carlos@bol.com",
-      "office": "Analista de Sistemas",
-      "id": 8
     }
   ]
 }
