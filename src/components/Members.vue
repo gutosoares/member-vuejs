@@ -1,5 +1,6 @@
 <template>
     <div id="members">
+        <input type="text" placeholder="Search Member by Office" v-model="filter">
         <h1>Members</h1>
         <table>
             <thead>
@@ -10,7 +11,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr v-for="member in members">
+                <tr v-for="member in filterBy(members, filter)">
                     <td>{{ member.name }}</td>
                     <td>{{ member.email }}</td>
                     <td>{{ member.office }}</td>
@@ -26,7 +27,8 @@ export default {
 
     data() {
         return {
-            members: []
+            members: [],
+            filter: ''
         }
     },
 
@@ -35,6 +37,13 @@ export default {
             var self = this
             self.$http.get('http://localhost:3000/customers').then(response => {
                 self.members = response.data
+            })
+        },
+
+        filterBy(list, value) {
+            value = value.charAt(0).toUpperCase() + value.slice(1)
+            return list.filter(member => {
+                return member.office.indexOf(value) > -1
             })
         }
     },
