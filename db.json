@@ -41,6 +41,12 @@
       "email": "tolkien@hobbit.com",
       "office": "Hobbit Author",
       "id": 7
+    },
+    {
+      "name": "Guto Soares",
+      "email": "guto@outlook.com",
+      "office": "Full Stack Developer",
+      "id": 8
     }
   ]
 }
