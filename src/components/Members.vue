@@ -77,9 +77,9 @@ export default {
 /* Config toastr position */
 #toast-container {
     top: auto !important;
-    right: auto !important;
-    bottom: 10%;
-    left: 82%;
+    left: auto !important;
+    bottom: 5%;
+    right: 2%;
 }
 
 /* Search Input */

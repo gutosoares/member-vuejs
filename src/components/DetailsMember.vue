@@ -31,8 +31,7 @@ export default {
 
         deleteMember(id) {
             this.$http.delete('http://localhost:3000/members/' + id).then(response => {
-                toastr.options.positionClass = "toast-bottom-right"
-                toastr["success"]("Delete Member with Success")
+                Materialize.toast('Delete Member with Success', 3000, 'red')
                 this.$router.push({ path: '/' })
             })
         }

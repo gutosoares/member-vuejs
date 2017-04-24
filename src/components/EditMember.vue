@@ -46,8 +46,7 @@ export default {
 
                 var self = this
                 self.$http.put('http://localhost:3000/members/' + self.$route.params.id, updateMember).then(response => {
-                    toastr.options.positionClass = "toast-bottom-right"
-                    toastr["success"]("Edit Member with success")
+                    Materialize.toast('Edit Member with Success', 3000, 'green')
                     self.$router.push({path: '/'})
                 })
             }
