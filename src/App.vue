@@ -18,21 +18,24 @@
 		</header>
 		<aside>
 			<ul id="slide-out" class="side-nav fixed">
+				<li class="logo-icon">
+					<i class="material-icons">person_pin</i>
+				</li>
 				<li>
-					<span class="icon-item"></span>
+					<i class="material-icons">toc</i>
 					<span>Tasks</span>
 				</li>
 				<li>
-					<span class="icon-item"></span>
+					<i class="material-icons">view_carousel</i>
 					<span>Contents</span>
 				</li>
 				<li>
-					<span class="icon-item"></span>
+					<i class="material-icons">settings</i>
 					<span>Setup</span>
 				</li>
 			</ul>
 		</aside>
-		<main class="container">
+		<main>
 			<router-view></router-view>
 		</main>
 	</div>
@@ -50,25 +53,6 @@
 			<main class="container">
 				<router-view></router-view>
 			</main>
-		</div>-->
-		<!--<div class="grid-sidebar">
-			<aside class="sidebar">
-				<span class="icon-sidebar"></span>
-				<ul>
-					<li>
-						<span class="icon-item"></span>
-						<span>Tasks</span>
-					</li>
-					<li>
-						<span class="icon-item"></span>
-						<span>Contents</span>
-					</li>
-					<li>
-						<span class="icon-item"></span>
-						<span>Setup</span>
-					</li>
-				</ul>
-			</aside>
 		</div>-->
 </template>
 
@@ -89,6 +73,7 @@ export default {
 </script>
 
 <style>
+/* Geral style */
 body {
 	background-color: rgba(242, 246, 247, 0.80);
 }
@@ -97,10 +82,7 @@ header, main, footer {
 	padding-left: 100px;
 }
 
-.side-nav {
-	width: 100px;
-}
-
+/* Header style */
 nav {
 	background-color: #eef2f3;
 	box-shadow: none;
@@ -134,5 +116,33 @@ nav ul a {
 .tabs .indicator {
 	bottom: 46px;
 	background-color: #86c06e;
+}
+
+/* Aside style */
+.side-nav {
+	width: 100px;
+	background-color: #feffff;
+}
+
+.side-nav .logo-icon .material-icons {
+	margin: 23px 0 45px 0;
+	font-size: 3.2em;
+}
+
+.side-nav li {
+	text-align: center;
+	color: #a8a8a8;
+	margin-bottom: 25px;
+	padding-top: 10px;
+}
+
+.side-nav li:hover {
+	background-color: #f4f4f4;
+}
+
+.side-nav li i {
+	text-align: center;
+	display: block;
+	color: #a8a8a8;
 }
 </style>
