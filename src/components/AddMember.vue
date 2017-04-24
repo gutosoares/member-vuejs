@@ -1,18 +1,28 @@
 <template>
     <div id="add-member">
-        <h1>Add Member</h1>
-        <form v-on:submit.prevent="addMember">
-            <label for="name">Name</label>
-            <input type="text" id="name" placeholder="Ex: Tolkien" v-model="member.name">
+        <div class="row">
+            <div class="col l12 s12">
+                <h1>Add Member</h1>
+                <form v-on:submit.prevent="addMember">
+                    <div class="input-field">
+                        <input class="validate" type="text" id="name" placeholder="Tolkien" v-model="member.name">
+                        <label for="name">Name</label>
+                    </div>
 
-            <label for="email">Email</label>
-            <input type="email" id="email" placeholder="Ex: tolkien@hobbit.com" v-model="member.email">
+                    <div class="input-field">
+                        <input class="validate" type="email" id="email" placeholder="tolkien@hobbit.com" v-model="member.email">
+                        <label for="email">Email</label>
+                    </div>
 
-            <label for="office">Office</label>
-            <input type="text" id="office" placeholder="Ex: The Hobbit Author" v-model="member.office">
-
-            <button type="submit">Add Member</button>
-        </form>
+                    <div class="input-field">
+                        <input class="validate" type="text" id="office" placeholder="The Hobbit Author" v-model="member.office">
+                        <label for="office">Office</label>
+                    </div>
+                    <button class="btn add-member-btn right" type="submit">Add Member</button>
+                    <router-link to="/"><a class="waves-effect waves-teal btn-flat right">Back</a></router-link>
+                </form>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -29,7 +39,7 @@ export default {
     methods: {
         addMember() {
             if(!this.member.name || !this.member.email || !this.member.office) {
-                Materialize.toast('Please fill in all required fields', 31000, 'amber accent-2')
+                Materialize.toast('Please fill in all required fields', 3000, 'amber accent-2')
             } else {
                 let newMember = {
                     name: this.member.name,
@@ -46,3 +56,32 @@ export default {
     }
 }
 </script>
+
+<style>
+/* Title Page */
+h1 {
+    font-size: 18px;
+    color: #a8a8a8;
+    margin-bottom: 45px;
+}
+
+/* Input Fields */
+.input-field input[type=text]:focus:not([readonly]),
+.input-field input[type=email]:focus:not([readonly]) {
+    border-bottom: 1px solid #86c06e;
+}
+
+.input-field input[type=text]:focus:not([readonly]) + label,
+.input-field input[type=email]:focus:not([readonly]) + label {
+    color: #86c06e;
+}
+
+/* Add button */
+.add-member-btn {
+    background-color: #659db8;
+}
+
+.add-member-btn:hover {
+    background-color: #5989a0;
+}
+</style>
