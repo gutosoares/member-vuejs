@@ -18,8 +18,8 @@
                         <input class="validate" type="text" id="office" v-model="member.office">
                         <label for="office">Office</label>
                     </div>
-                    <button class="btn add-member-btn right" type="submit">Add Member</button>
-                    <router-link to="/"><a class="waves-effect waves-teal btn-flat back-btn right">Back</a></router-link>
+                    <button class="btn add-member-btn right" type="submit" title="Add New Member">Add Member</button>
+                    <router-link to="/"><a class="waves-effect waves-teal btn-flat back-btn right" title="Back">Back</a></router-link>
                 </form>
             </div>
         </div>

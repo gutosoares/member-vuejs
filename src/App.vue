@@ -1,16 +1,16 @@
 <template>
 	<div id="app">
 		<header>
-			<nav class="nav-extended">
+			<nav class="nav-extended hide-on-small-only">
 				<div class="nav-wrapper">
-					<router-link to='/' class="brand-logo">Setup</router-link>
+					<router-link to='/' class="brand-logo" title="Setup">Setup</router-link>
 					<ul class="right user-login">
-						<li><router-link to="/">Olá, Augusto <i class="material-icons right">arrow_drop_down</i></router-link></a></li>
+						<li><router-link to="/">Olá, Augusto <i class="material-icons right">arrow_drop_down</i></router-link></li>
 					</ul>
 					<div class="nav-content">
 						<ul class="tabs">
-							<li class="tab"><router-link to="/members" class="active">Minha Equipe</router-link></li>
-							<li class="tab"><a href="#test2">Cargos</a></li>
+							<li class="tab"><router-link to="/members" class="active" title="My Team">My Team </router-link></li>
+							<li class="tab"><a href="#" title="Offices">Offices</a></li>
 						</ul>
 					</div>
 				</div>
@@ -39,21 +39,6 @@
 			<router-view></router-view>
 		</main>
 	</div>
-		<!--<div class="grid-main">
-			<header class="header">
-				<div class="container">
-					<nav>
-						<ul>
-							<router-link to="/"><button>Members</button></router-link>
-							<router-link to="/add"><button>Add Member</button></router-link>
-						</ul>
-					</nav>	
-				</div>
-			</header>
-			<main class="container">
-				<router-view></router-view>
-			</main>
-		</div>-->
 </template>
 
 <script>
@@ -144,6 +129,7 @@ nav ul a {
 	color: #a8a8a8;
 	font-weight: 400;
     font-size: 0.8em;
+	cursor: pointer;
 }
 
 .side-nav li:hover {

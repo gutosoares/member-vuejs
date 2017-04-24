@@ -18,8 +18,8 @@
                             <input class="validate" type="text" id="office" v-model="member.office">
                             <label for="office">Office</label>
                         </div>
-                        <button class="btn save-btn right" type="submit">Save</button>
-                        <router-link to="/"><a class="waves-effect waves-teal btn-flat back-btn right">Back</a></router-link>
+                        <button class="btn save-btn right" type="submit" title="Save">Save</button>
+                        <router-link to="/"><a class="waves-effect waves-teal btn-flat back-btn right" title="Back">Back</a></router-link>
                     </form>
                 </div>
             </div>
@@ -47,7 +47,7 @@ export default {
 
         updateMember() {
             if(!this.member.name || !this.member.email || !this.member.office) {
-                console.log("lease fill in all required fields")
+                Materialize.toast('Please fill in all required fields', 3000, 'amber accent-2')
             } else {
                 let updateMember = {
                     name: this.member.name,

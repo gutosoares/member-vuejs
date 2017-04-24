@@ -7,22 +7,22 @@
                 <label for="search">Search Member by Office</label>
             </div>
             <div class="col s6 change-view right-align">
-                <span>Visualizar: </span>
-                <a href="#" class="btn btn-item btn-disable">Freelas</a>
-                <a href="#" class="btn btn-item">Usuários</a>
-                <router-link to="/add"><a class="add-member waves-effect waves-light btn-large">Add Member</a></router-link>
+                <span class="hide-on-med-and-down">View: </span>
+                <a href="#" title="Freelas" class="btn btn-item btn-disable hide-on-med-and-down">Freelas</a>
+                <a href="#" title="Users" class="btn btn-item hide-on-med-and-down">Users</a>
+                <router-link to="/add"><a class="add-member waves-effect waves-light btn-large" title="Add New Member">Add Member</a></router-link>
             </div>
         </div>
         <div class="row">
-            <div class="col l12 s1">
+            <div class="col xl12 l12 m12 s12">
                 <div class="row">
-                    <div class="col xl3 m2 s1 card-list" v-for="member in filterBy(members, filter)">
-                        <router-link v-bind:to="'/member/' + member.id">
+                    <div class="col xl2 l3 m6 s12 card-list" v-for="member in filterBy(members, filter)">
+                        <router-link v-bind:to="'/member/' + member.id" :title=member.name>
                             <div class="card">
                                 <div class="card-content center-align">
                                     <img src="src/assets/profile.jpg" width="64" height="64">
                                     <p class="member-name truncate">{{ member.name }} - <span>{{ member.office }}</span></p>
-                                    <p class="member-email">{{ member.email }}</p>
+                                    <p class="member-email truncate">{{ member.email }}</p>
                                 </div>
                             </div>
                         </router-link>

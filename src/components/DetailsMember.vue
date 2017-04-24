@@ -5,7 +5,7 @@
                 <h1>Details</h1>
                 <div class="card horizontal">
                     <div class="card-image">
-                        <img src="/src/assets/profile.jpg" alt="Member Profile" height="200">
+                        <img src="/src/assets/profile.jpg" :alt=member.name height="200">
                     </div>
                     <div class="card-content">
                         <h3>{{ member.name }}</h3> 
@@ -13,9 +13,9 @@
                         <p class="member-email">{{ member.email }}</p>
                     </div>
                 </div>
-                <a class="waves-effect waves-light btn delete-btn right" @click="deleteMember(member.id)">Delete</a>
-                <router-link v-bind:to="'/edit/' + member.id"><a class="waves-effect waves-light btn edit-btn right">Edit</a></router-link>
-                <router-link to="/"><a class="waves-effect waves-teal btn-flat back-btn right">Back</a></router-link>
+                <a class="waves-effect waves-light btn delete-btn right" title="Delete Member" @click="deleteMember(member.id)">Delete</a>
+                <router-link v-bind:to="'/edit/' + member.id"><a class="waves-effect waves-light btn edit-btn right" title="Edit Member">Edit</a></router-link>
+                <router-link to="/"><a class="waves-effect waves-teal btn-flat back-btn right" title="Back">Back</a></router-link>
             </div>
         </div>
     </div>
