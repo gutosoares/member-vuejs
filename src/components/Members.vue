@@ -14,27 +14,20 @@
             </div>
         </div>
         <div class="row">
-            <div class="col s12">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Email</th>
-                            <th>Office</th>
-                            <th>Ações</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr v-for="member in filterBy(members, filter)">
-                            <td>{{ member.name }}</td>
-                            <td>{{ member.email }}</td>
-                            <td>{{ member.office }}</td>
-                            <td>
-                                <router-link v-bind:to="'/member/' + member.id"><button>Details</button></router-link>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="col l12 s1">
+                <div class="row">
+                    <div class="col xl3 m2 s1 card-list" v-for="member in filterBy(members, filter)">
+                        <router-link v-bind:to="'/member/' + member.id">
+                            <div class="card">
+                                <div class="card-content center-align">
+                                    <img src="src/assets/profile.jpg" width="64" height="64">
+                                    <p class="member-name truncate">{{ member.name }} - <span>{{ member.office }}</span></p>
+                                    <p class="member-email">{{ member.email }}</p>
+                                </div>
+                            </div>
+                        </router-link>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -83,11 +76,15 @@ export default {
 }
 
 /* Search Input */
+.input-field {
+    margin-left: -33px !important;
+}
+
 .input-field .material-icons {
     margin-top: 12px;
     margin-left: 42px;
     font-size: 22px;
-    color: rgba(168, 168, 168, 0.25);
+    color: rgba(168, 168, 168, 0.40);
 }
 
 .input-field label {
@@ -151,10 +148,37 @@ export default {
 /* Button Add Member */
 .add-member {
     background-color: #86c06e;
+    margin-right: -22px;
 }
 
 .add-member:hover {
     background-color: #5da93e;
 }
 
+/* Card Style */
+.card {
+    background-color: #f8f8f8;
+    box-shadow: none;
+    border: 1px solid rgba(168, 168, 168, 0.35);
+    border-radius: 3px;
+}
+
+.card-content img {
+    margin-bottom: 10px;
+    border-radius: 50%;
+}
+
+.card .card-content p {
+    color: rgba(168, 168, 168, 0.80);
+}
+
+.card .card-content .member-name span {
+    font-weight: 200;
+    font-size: 14px;
+}
+
+.card .card-content .member-email {
+    color: rgba(39.6%, 61.6%, 72.2%, 0.8);
+    font-size: 12px;
+}
 </style>
