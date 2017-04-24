@@ -74,6 +74,14 @@ export default {
 </script>
 
 <style>
+/* Config toastr position */
+#toast-container {
+    top: auto !important;
+    right: auto !important;
+    bottom: 10%;
+    left: 82%;
+}
+
 /* Search Input */
 .input-field .material-icons {
     margin-top: 12px;
@@ -144,11 +152,9 @@ export default {
 .add-member {
     background-color: #86c06e;
 }
-/* Config toastr position */
-#toast-container {
-  top: auto !important;
-  right: auto !important;
-  bottom: 10%;
-  left: 82%;
+
+.add-member:hover {
+    background-color: #5da93e;
 }
+
 </style>
