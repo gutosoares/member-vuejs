@@ -13,6 +13,7 @@ Vue.use(VueResource)
 
 const routes = [
 	{path: '/', component: Members},
+	{path: '/members', component: Members},
 	{path: '/add', component: AddMember},
 	{path: '/member/:id', component: DetailsMember},
 	{path: '/edit/:id', component: EditMember}
