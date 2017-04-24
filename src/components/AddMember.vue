@@ -5,21 +5,21 @@
                 <h1>Add Member</h1>
                 <form v-on:submit.prevent="addMember">
                     <div class="input-field">
-                        <input class="validate" type="text" id="name" placeholder="Tolkien" v-model="member.name">
+                        <input class="validate" type="text" id="name" v-model="member.name">
                         <label for="name">Name</label>
                     </div>
 
                     <div class="input-field">
-                        <input class="validate" type="email" id="email" placeholder="tolkien@hobbit.com" v-model="member.email">
+                        <input class="validate" type="email" id="email" v-model="member.email">
                         <label for="email">Email</label>
                     </div>
 
                     <div class="input-field">
-                        <input class="validate" type="text" id="office" placeholder="The Hobbit Author" v-model="member.office">
+                        <input class="validate" type="text" id="office" v-model="member.office">
                         <label for="office">Office</label>
                     </div>
                     <button class="btn add-member-btn right" type="submit">Add Member</button>
-                    <router-link to="/"><a class="waves-effect waves-teal btn-flat right">Back</a></router-link>
+                    <router-link to="/"><a class="waves-effect waves-teal btn-flat back-btn right">Back</a></router-link>
                 </form>
             </div>
         </div>
@@ -68,7 +68,7 @@ h1 {
 /* Input Fields */
 .input-field input[type=text]:focus:not([readonly]),
 .input-field input[type=email]:focus:not([readonly]) {
-    border-bottom: 1px solid #86c06e;
+    border-color: #86c06e;
 }
 
 .input-field input[type=text]:focus:not([readonly]) + label,
@@ -79,6 +79,7 @@ h1 {
 /* Add button */
 .add-member-btn {
     background-color: #659db8;
+    margin-left: 20px;
 }
 
 .add-member-btn:hover {
