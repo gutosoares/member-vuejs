@@ -82,6 +82,10 @@ header, main, footer {
 	padding-left: 100px;
 }
 
+.back-btn {
+	color: #8a8a8a;
+}
+
 /* Header style */
 nav {
 	background-color: #eef2f3;
