@@ -144,4 +144,11 @@ export default {
 .add-member {
     background-color: #86c06e;
 }
+/* Config toastr position */
+#toast-container {
+  top: auto !important;
+  right: auto !important;
+  bottom: 10%;
+  left: 82%;
+}
 </style>
