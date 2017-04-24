@@ -1,24 +1,29 @@
 <template>
     <div id="edit-member">
-        <h1>Edit Member</h1>
-        <form v-on:submit.prevent="updateMember">
-            <div class="input-field">
-                <input class="validate" type="text" id="name" v-model="member.name">
-                <label for="name">Name</label>
-            </div>
+        <div class="row">
+                <div class="col l12 s12">
+                    <h1>Edit Member</h1>
+                    <form v-on:submit.prevent="updateMember">
+                        <div class="input-field">
+                            <input class="validate" type="text" id="name" v-model="member.name">
+                            <label for="name">Name</label>
+                        </div>
 
-            <div class="input-field">
-                <input class="validate" type="email" id="email" v-model="member.email">
-                <label for="email">Email</label>
-            </div>
+                        <div class="input-field">
+                            <input class="validate" type="email" id="email" v-model="member.email">
+                            <label for="email">Email</label>
+                        </div>
 
-            <div class="input-field">
-                <input class="validate" type="text" id="office" v-model="member.office">
-                <label for="office">Office</label>
+                        <div class="input-field">
+                            <input class="validate" type="text" id="office" v-model="member.office">
+                            <label for="office">Office</label>
+                        </div>
+                        <button class="btn save-btn right" type="submit">Save</button>
+                        <router-link to="/"><a class="waves-effect waves-teal btn-flat back-btn right">Back</a></router-link>
+                    </form>
+                </div>
             </div>
-            <button class="btn save-btn right" type="submit">Save</button>
-            <router-link to="/"><a class="waves-effect waves-teal btn-flat right">Back</a></router-link>
-        </form>
+        </div>
     </div>
 </template>
 
@@ -65,7 +70,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 /* Title Page */
 h1 {
     font-size: 18px;
@@ -76,7 +81,7 @@ h1 {
 /* Input Fields */
 .input-field input[type=text]:focus:not([readonly]),
 .input-field input[type=email]:focus:not([readonly]) {
-    border-bottom: 1px solid #86c06e;
+    border-color: #86c06e;
 }
 
 .input-field input[type=text]:focus:not([readonly]) + label,
@@ -84,9 +89,14 @@ h1 {
     color: #86c06e;
 }
 
+.input-text label.active {
+    color: #86c06e;
+}
+
 /* Add button */
 .save-btn {
     background-color: #659db8;
+    margin-left: 20px;
 }
 
 .save-btn:hover {

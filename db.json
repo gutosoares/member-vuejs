@@ -7,10 +7,10 @@
       "id": 1
     },
     {
-      "id": 2,
-      "name": "Augusto Soares",
+      "name": "Augusto Soares Pereira",
       "email": "gutosoares@outlook.com",
-      "office": "Front-End Developer"
+      "office": "Front-End Developer",
+      "id": 2
     },
     {
       "name": "Evan You",
@@ -43,9 +43,9 @@
       "id": 7
     },
     {
-      "name": "Guto Soares",
-      "email": "guto@outlook.com",
-      "office": "Full Stack Developer",
+      "name": "Amanda",
+      "email": "amanda@gmail.com",
+      "office": "Baladeira com certeza!",
       "id": 8
     }
   ]

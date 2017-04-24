@@ -103,12 +103,12 @@ export default {
 .input-field.search input[type=text] {
     margin-top: -3px;
     padding-left: 35px;
-    border-bottom: 1px solid rgba(168, 168, 168, 0.25);
+    border-color: rgba(168, 168, 168, 0.25);
     color: #a8a8a8;
 }
 
 .input-field.search input[type=text]:focus:not([readonly]) {
-    border-bottom: 1px solid #86c06e;
+    border-color: #86c06e;
 }
 
 .input-field.search input[type=text]:focus:not([readonly]) + label {
