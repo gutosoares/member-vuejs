@@ -35,8 +35,8 @@
 				</li>
 			</ul>
 		</aside>
-		<main>
-			<!--<router-view></router-view>-->
+		<main class="content">
+			<router-view></router-view>
 		</main>
 	</div>
 		<!--<div class="grid-main">
@@ -150,5 +150,9 @@ nav ul a {
 	text-align: center;
 	display: block;
 	color: #a8a8a8;
+}
+
+.content {
+	margin: 0 30px 0 30px;
 }
 </style>
