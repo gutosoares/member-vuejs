@@ -18,9 +18,9 @@
 		</header>
 		<aside>
 			<ul id="slide-out" class="side-nav fixed">
-				<li class="logo-icon">
+				<span class="logo-icon">
 					<i class="material-icons">person_pin</i>
-				</li>
+				</span>
 				<li>
 					<i class="material-icons">toc</i>
 					<span>Tasks</span>
@@ -36,7 +36,7 @@
 			</ul>
 		</aside>
 		<main>
-			<router-view></router-view>
+			<!--<router-view></router-view>-->
 		</main>
 	</div>
 		<!--<div class="grid-main">
@@ -89,10 +89,10 @@ nav {
 }
 
 nav .brand-logo {
-	font-weight: 200;
-	font-size: 1.8em;
-	margin-left: 20px;
-	color: #222b39;
+	font-weight: 300;
+	font-size: 1.6em;
+	margin-left: 30px;
+	color: #659db8;
 }
 
 nav ul a {
@@ -101,7 +101,7 @@ nav ul a {
 
 .tabs {
 	background-color: #eef2f3;
-	margin-left: 20px;
+	margin-left: 30px;
 }
 
 .tabs .tab a:hover {
@@ -125,15 +125,21 @@ nav ul a {
 }
 
 .side-nav .logo-icon .material-icons {
+	display: block;
 	margin: 23px 0 45px 0;
 	font-size: 3.2em;
+	text-align: center;
+	color: #a8a8a8;
 }
 
 .side-nav li {
-	text-align: center;
-	color: #a8a8a8;
 	margin-bottom: 25px;
 	padding-top: 10px;
+	text-align: center;
+	text-transform: uppercase;
+	color: #a8a8a8;
+	font-weight: 400;
+    font-size: 0.8em;
 }
 
 .side-nav li:hover {
