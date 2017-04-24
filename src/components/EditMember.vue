@@ -2,16 +2,22 @@
     <div id="edit-member">
         <h1>Edit Member</h1>
         <form v-on:submit.prevent="updateMember">
-            <label for="name">Name</label>
-            <input type="text" id="name" placeholder="Ex: Tolkien" v-model="member.name">
+            <div class="input-field">
+                <input class="validate" type="text" id="name" v-model="member.name">
+                <label for="name">Name</label>
+            </div>
 
-            <label for="email">Email</label>
-            <input type="email" id="email" placeholder="Ex: tolkien@hobbit.com" v-model="member.email">
+            <div class="input-field">
+                <input class="validate" type="email" id="email" v-model="member.email">
+                <label for="email">Email</label>
+            </div>
 
-            <label for="office">Office</label>
-            <input type="text" id="office" placeholder="Ex: The Hobbit Author" v-model="member.office">
-
-            <button type="submit">Save</button>
+            <div class="input-field">
+                <input class="validate" type="text" id="office" v-model="member.office">
+                <label for="office">Office</label>
+            </div>
+            <button class="btn save-btn right" type="submit">Save</button>
+            <router-link to="/"><a class="waves-effect waves-teal btn-flat right">Back</a></router-link>
         </form>
     </div>
 </template>
@@ -58,3 +64,32 @@ export default {
     }
 }
 </script>
+
+<style>
+/* Title Page */
+h1 {
+    font-size: 18px;
+    color: #a8a8a8;
+    margin-bottom: 45px;
+}
+
+/* Input Fields */
+.input-field input[type=text]:focus:not([readonly]),
+.input-field input[type=email]:focus:not([readonly]) {
+    border-bottom: 1px solid #86c06e;
+}
+
+.input-field input[type=text]:focus:not([readonly]) + label,
+.input-field input[type=email]:focus:not([readonly]) + label {
+    color: #86c06e;
+}
+
+/* Add button */
+.save-btn {
+    background-color: #659db8;
+}
+
+.save-btn:hover {
+    background-color: #5989a0;
+}
+</style>

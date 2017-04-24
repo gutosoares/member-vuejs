@@ -1,7 +1,7 @@
 <template>
     <div id="members">
         <div class="row">
-            <div class="input-field col s6">
+            <div class="input-field search col s6">
                 <i class="material-icons prefix">search</i>
                 <input type="text" id="search" v-model="filter">
                 <label for="search">Search Member by Office</label>
@@ -76,42 +76,42 @@ export default {
 }
 
 /* Search Input */
-.input-field {
+.input-field.search {
     margin-left: -33px !important;
 }
 
-.input-field .material-icons {
+.input-field.search .material-icons {
     margin-top: 12px;
     margin-left: 42px;
     font-size: 22px;
     color: rgba(168, 168, 168, 0.40);
 }
 
-.input-field label {
+.input-field.search label {
     font-size: 13px;
     color: rgba(101, 157, 184, 0.76);
 }
 
-.input-field .prefix ~ label {
+.input-field.search .prefix ~ label {
     margin-left: 5.4rem;
 }
 
-.input-field .prefix.active {
+.input-field.search .prefix.active {
     color: #86c06e;
 }
 
-.input-field input[type=text] {
+.input-field.search input[type=text] {
     margin-top: -3px;
     padding-left: 35px;
     border-bottom: 1px solid rgba(168, 168, 168, 0.25);
     color: #a8a8a8;
 }
 
-.input-field input[type=text]:focus:not([readonly]) {
+.input-field.search input[type=text]:focus:not([readonly]) {
     border-bottom: 1px solid #86c06e;
 }
 
-.input-field input[type=text]:focus:not([readonly]) + label {
+.input-field.search input[type=text]:focus:not([readonly]) + label {
     color: #86c06e;
 }
 
