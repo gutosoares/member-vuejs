@@ -91,7 +91,7 @@ nav {
 nav .brand-logo {
 	font-weight: 300;
 	font-size: 1.6em;
-	margin-left: 30px;
+	margin-left: 50px;
 	color: #659db8;
 }
 
@@ -101,7 +101,7 @@ nav ul a {
 
 .tabs {
 	background-color: #eef2f3;
-	margin-left: 30px;
+	margin-left: 50px;
 }
 
 .tabs .tab a:hover {
