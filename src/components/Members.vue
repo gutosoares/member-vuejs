@@ -15,7 +15,7 @@
         </div>
         <div class="row">
             <div class="col xl12 l12 m12 s12">
-                <div class="row">
+                <div class="row" v-if="members.length">
                     <div class="col xl3 l3 m6 s12 card-list" v-for="member in filterBy(members, filter)">
                         <router-link v-bind:to="'/member/' + member.id" :title="member.name">
                             <div class="card">
@@ -28,6 +28,7 @@
                         </router-link>
                     </div>
                 </div>
+                <h3 class="anybody center-align" v-else>Ops, anybody in your team.</h3>
             </div>
         </div>
     </div>
@@ -181,5 +182,12 @@ export default {
 .card .card-content .member-email {
     color: rgba(39.6%, 61.6%, 72.2%, 0.8);
     font-size: 12px;
+}
+
+.anybody {
+    font-weight: 200;
+    text-align: center;
+    margin-top: 10%;
+    color: rgba(138, 138, 138, 0.40);
 }
 </style>
