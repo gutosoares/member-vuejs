@@ -9,8 +9,12 @@
 					</ul>
 					<div class="nav-content">
 						<ul class="tabs">
-							<li class="tab"><router-link to="/members" class="active" title="My Team">My Team </router-link></li>
-							<li class="tab"><a href="#" title="Offices">Offices</a></li>
+							<li class="tab">
+								<router-link to="/members" class="active" title="My Team">My Team </router-link>
+							</li>
+							<li class="tab">
+								<router-link to="/offices" title="Offices">Offices</router-link>
+							</li>
 						</ul>
 					</div>
 				</div>
@@ -36,6 +40,10 @@
 			</ul>
 		</aside>
 		<main class="content">
+			<div class="actions-mobile center-align hide-on-med-and-up">
+				<router-link to="/members" class="btn btn-home-mobile" title="My Team">My Team </router-link>
+				<router-link to="/offices" class="btn btn-offices-mobile" title="Offices">Offices</router-link>
+			</div>
 			<router-view></router-view>
 		</main>
 	</div>
@@ -87,10 +95,12 @@ nav .brand-logo {
 nav ul a {
 	color: #a8a8a8 !important;
 }
+.nav-content {
+	margin-left: 50px;
+}
 
 .tabs {
 	background-color: #eef2f3;
-	margin-left: 50px;
 }
 
 .tabs .tab a:hover {
@@ -144,5 +154,27 @@ nav ul a {
 
 .content {
 	margin: 0 30px 0 30px;
+}
+
+.actions-mobile .btn {
+	margin: 10px 0 20px 0;
+	background-color: #659db8;
+}
+
+.actions-mobile .btn:hover {
+    background-color: #5989a0;
+}
+
+/* Media Query */
+@media only screen and (max-width: 990px) {
+	header, main, footer {
+		padding-left: 0px;
+	}
+}
+
+@media only screen and (max-width: 1083px) {
+	.change-view span {
+		display: none;
+	}
 }
 </style>

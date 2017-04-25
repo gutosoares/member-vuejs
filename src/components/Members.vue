@@ -1,12 +1,12 @@
 <template>
     <div id="members">
         <div class="row">
-            <div class="input-field search col s6">
+            <div class="input-field search col s6 l6">
                 <i class="material-icons prefix">search</i>
                 <input type="text" id="search" v-model="filter">
                 <label for="search">Search Member by Office</label>
             </div>
-            <div class="col s6 change-view right-align">
+            <div class="col s6 l6 change-view right-align">
                 <span class="hide-on-med-and-down">View: </span>
                 <a href="#" title="Freelas" class="btn btn-item btn-disable hide-on-med-and-down">Freelas</a>
                 <a href="#" title="Users" class="btn btn-item hide-on-med-and-down">Users</a>
@@ -16,8 +16,8 @@
         <div class="row">
             <div class="col xl12 l12 m12 s12">
                 <div class="row">
-                    <div class="col xl2 l3 m6 s12 card-list" v-for="member in filterBy(members, filter)">
-                        <router-link v-bind:to="'/member/' + member.id" :title=member.name>
+                    <div class="col xl3 l3 m6 s12 card-list" v-for="member in filterBy(members, filter)">
+                        <router-link v-bind:to="'/member/' + member.id" :title="member.name">
                             <div class="card">
                                 <div class="card-content center-align">
                                     <img src="src/assets/profile.jpg" width="64" height="64">
@@ -119,6 +119,7 @@ export default {
 .change-view {
     margin-top: 20px;
 }
+
 .change-view span {
     color: rgba(101, 157, 184, 0.76);
     margin-right: 20px;

@@ -1,7 +1,7 @@
 <template>
     <div id="details-member">
         <div class="row">
-            <div class="col l12 s12">
+            <div class="col s12">
                 <h1>Details</h1>
                 <div class="card horizontal">
                     <div class="card-image">

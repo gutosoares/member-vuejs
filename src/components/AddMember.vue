@@ -1,7 +1,7 @@
 <template>
     <div id="add-member">
         <div class="row">
-            <div class="col l12 s12">
+            <div class="col s12">
                 <h1>Add Member</h1>
                 <form v-on:submit.prevent="addMember">
                     <div class="input-field">
@@ -84,5 +84,9 @@ h1 {
 
 .add-member-btn:hover {
     background-color: #5989a0;
+}
+
+.add-member-btn:focus {
+    background-color: #659db8;
 }
 </style>

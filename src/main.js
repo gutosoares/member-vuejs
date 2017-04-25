@@ -7,6 +7,7 @@ import Members from './components/Members.vue'
 import AddMember from './components/AddMember.vue'
 import DetailsMember from './components/DetailsMember.vue'
 import EditMember from './components/EditMember.vue'
+import Office from './components/Office.vue'
 
 Vue.use(VueRouter)
 Vue.use(VueResource)
@@ -14,6 +15,7 @@ Vue.use(VueResource)
 const routes = [
 	{path: '/', component: Members},
 	{path: '/members', component: Members},
+	{path: '/offices', component: Office},
 	{path: '/add', component: AddMember},
 	{path: '/member/:id', component: DetailsMember},
 	{path: '/edit/:id', component: EditMember}
