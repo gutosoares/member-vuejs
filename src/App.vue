@@ -10,7 +10,7 @@
 					<div class="nav-content">
 						<ul class="tabs">
 							<li class="tab">
-								<router-link to="/members" class="active" title="My Team">My Team </router-link>
+								<router-link to="/members" title="My Team">My Team </router-link>
 							</li>
 							<li class="tab">
 								<router-link to="/offices" title="Offices">Offices</router-link>
@@ -59,7 +59,7 @@ export default {
 	},
 	data () {
 		return {
-		
+
 		}
 	}
 }
