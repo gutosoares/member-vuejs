@@ -47,6 +47,18 @@
       "email": "amanda@gmail.com",
       "office": "Baladeira com certeza!",
       "id": 8
+    },
+    {
+      "name": "Carlos",
+      "email": "carlos@hotmail.com",
+      "office": "developer",
+      "id": 9
+    },
+    {
+      "name": "Moritz",
+      "email": "moritz@outlook.com",
+      "office": "Front-End Developer",
+      "id": 10
     }
   ]
 }
