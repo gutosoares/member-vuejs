@@ -1,6 +1,6 @@
 # Member \ Vue.js
 
-> Simple CURD build in Vue.js Framework
+> Simple CRUD build in Vue.js Framework
 
 ## Demo
 ![Demo](demo/demo.gif)
