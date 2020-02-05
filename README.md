@@ -12,6 +12,15 @@
 * [Json Server](https://github.com/typicode/json-server)
 * [Materialize](http://materializecss.com)
 
+## Update to version 2.0 - todo list
+- [x] Update vue/vue-cli version 
+- [ ] Change Options API to new Composition API 
+- [ ] Using atomic desing
+- [ ] Change materialize.css to tailwind.css
+- [ ] Add sign in, sign up and login features
+- [ ] Add Auth on routes
+- [ ] Using real node API
+
 ## Build Setup
 
 ``` bash
