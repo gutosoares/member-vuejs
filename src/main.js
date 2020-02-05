@@ -13,12 +13,12 @@ Vue.use(VueRouter)
 Vue.use(VueResource)
 
 const routes = [
-	{path: '/', component: Members},
-	{path: '/members', component: Members},
-	{path: '/offices', component: Office},
-	{path: '/add', component: AddMember},
-	{path: '/member/:id', component: DetailsMember},
-	{path: '/edit/:id', component: EditMember}
+	{ path: '/', component: Members} ,
+	{ path: '/members', component: Members} ,
+	{ path: '/offices', component: Office} ,
+	{ path: '/add', component: AddMember} ,
+	{ path: '/member/:id', component: DetailsMember} ,
+	{ path: '/edit/:id', component: EditMember }
 ]
 
 const router = new VueRouter({
